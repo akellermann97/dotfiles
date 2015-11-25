@@ -1,0 +1,2 @@
+# miorc
+Dormio's vimdc
