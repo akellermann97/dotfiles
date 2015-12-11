@@ -1,7 +1,7 @@
-##Dormio's .vimrc
+#Dormio's .vimrc
 I started using vim in May of 2015. I didn't put much effort into it until early December 2015 when I started writing some C code in it. Here is that vimrc.
 
-#Features of the vimrc 
+##Features of the vimrc 
 
 - Automatic Installation of the Vim-Plug plugin manager
 - Automatic Configuration of the GUI font
@@ -12,7 +12,7 @@ I started using vim in May of 2015. I didn't put much effort into it until early
 - Tabs converted into spaces
 - Nerd Tree shortcut of F2 to enable.
 
-#Potential Problems
+##Potential Problems
 
 - Never been tested on Linux or Windows based Systems.
 - GUI font may cause trouble if run inside the terminal.
