@@ -20,8 +20,7 @@ I started using vim in May of 2015. I didn't put much effort into it until early
 ##Potential Problems
 
 - Never been tested on Linux or Windows based Systems.
-- GUI font may cause trouble if run inside the terminal.
-- Colorscheme will look weird on Terminals that can only display 256 colors.
+- Colorscheme will look weird on Terminals that can only display 8 or 16 colors.
 
 ###Important Note
 
