@@ -8,6 +8,7 @@ Plug 'hdima/python-syntax'
 Plug 'scrooloose/nerdtree'
 Plug 'morhetz/gruvbox'
 Plug 'bling/vim-airline'
+Plug 'tpop/vim-fugitive'
         
 
 call plug#end()                 
