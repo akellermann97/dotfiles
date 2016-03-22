@@ -1,27 +1,16 @@
-#Dormio's .vimrc & NEW init.vim
-I started using vim in May of 2015. I didn't put much effort into it until early December 2015 when I started writing some C code in it. Here is that vimrc.
+#Dormio's dotfiles
+Here are some of the dotfiles I use for various programs. Right now you can find dotfiles for
+- i3 (Window Manager)
+- Neovim and Vim (Text Editors)
+- i3 blocks (status_command for i3)
 
-##Features of the vimrc 
+### Dependencies for i3
+- I use rofi as a replacement for demenu, it's a personal preference, as they both operate almost exactly the same.
+- I use py3status instead of i3status for the moment, although that might change in the future
 
-- Automatic Installation of the Vim-Plug plugin manager
-- Automatic Configuration of the GUI font
-- Gruvbox colorscheme pre-installed
-- Most features should be up and running
-- Custom tailored for MacVim (This version isn't designed for terminal usage)
-- Syntax turned on
-- Tabs converted into spaces
-- Nerd Tree shortcut of F2 to enable.
+## Dependencies for Nvim/vim
+- Vim Plug (needs to be installed for the rest of the file to work. Once installed everything else should operate as expected.)
 
-##Differences between init.vim and .vimrc
-- Difference plug in locations
-- Tabs were correctly updated for the init.vim and not for the .vimrc
-- different auto complete plug-in that takes advantage of neovim's new powers
-- init.vim is the one used for my personal PC
-##Potential Problems
-
-- Never been tested on Linux or Windows based Systems.
-- Colorscheme will look weird on Terminals that can only display 8 or 16 colors.
-
-###Important Note
-
-The vimrc is only here in case I need it, or for reference for anyone else who is looking into implementing a similar vimrc for their own personal use. In my personal opinion, there is no reason if a person is deciding to use vim not to use neovim. Instructions can be found on the [neovim website](http://neovim.io)
+####Some notes
+These files haven't been tested on a variety of machines, so you may find that some things do not work
+straight out of the box.
