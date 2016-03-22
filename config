@@ -51,7 +51,7 @@ for_window [class="^.*"] border pixel 0
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec rofi-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -189,9 +189,8 @@ bindsym $mod+r mode "resize"
          client.urgent           $base02 $base08    $base00 $base0F
 
 bar {
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+        status_command py3status
 
         tray_output primary
 	position top
 }
-
