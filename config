@@ -11,6 +11,7 @@
 
 gaps outer 10
 gaps inner 8
+smart_gaps on
 
 set $mod Mod1
 
@@ -170,8 +171,8 @@ mode "resize" {
 
 #This is where I've placed startup programs
 
-exec_always feh --bg-center /home/akellermann/Pictures/che-stallman-wallpaper.png
 exec_always /usr/bin/vmware-user-suid-wrapper # This runs VMware tools for me
+exec_always feh --bg-center /home/akellermann/Pictures/che-stallman-wallpaper.png
 exec compton -f # This is the compositor, gives us nice fade effects
 
 bindsym $mod+r mode "resize"
@@ -190,7 +191,6 @@ bindsym $mod+r mode "resize"
 
 bar {
         status_command py3status
-
         tray_output primary
 	position top
 }
