@@ -51,6 +51,9 @@ for_window [class="^.*"] border pixel 0
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Quickly locking the screen using the custom lock script
+bindsym $mod+Shift+Tab exec sh ~/dotfiles/lock.sh
+
 # start a terminal
 bindsym $mod+Return exec rofi-sensible-terminal
 
