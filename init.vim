@@ -22,6 +22,7 @@ set number
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let python_highlight_all = 1
+let g:deoplete#enable_at_startup = 1
 syntax enable
 set background=dark
 set expandtab                                      " insert spaces instead of tab characters"
