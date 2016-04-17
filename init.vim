@@ -16,7 +16,8 @@ colorscheme gruvbox
 if has("gui_running")
     set guifont=Fira\ Mono\ for\ Powerline         " Make sure to escape the spaces in the name properly
 endif
-map <F2> :NERDTreeToggle<CR>
+map <F2> :NERDTreeToggle<CR>                       " Toggles NERDTreeToggle
+nnoremap <F3> :set hlsearch!<CR>                   " Turns off search highlighting
 set relativenumber
 set number
 let g:airline#extensions#tabline#enabled = 1
@@ -27,6 +28,8 @@ syntax enable
 set background=dark
 set expandtab                                      " insert spaces instead of tab characters"
 set backspace=2                                    " make backspace work like most other apps
+set textwidth=79
+set fileformat=unix
 set shiftwidth=4
 set softtabstop=4
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -40,7 +43,7 @@ set lazyredraw                                     " redraw only when we need to
 set showmatch                                      " highlight matching [{()}]
 set incsearch                                      " search as characters are entered
 set hlsearch                                       " highlight matches
-nnoremap <leader><space> :nohlsearch<CR>           " turn off search highlight
 set noswapfile                                     " Swap files always gave me too much trouble, better off turning them off
 set nobackup
 set nowritebackup
+
