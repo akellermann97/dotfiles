@@ -192,7 +192,7 @@ mode "resize" {
 
 exec_always /usr/bin/vmware-user-suid-wrapper # This runs VMware tools for me
 exec_always feh --bg-center /home/akellermann/Pictures/japan.png
-exec compton -f # This is the compositor, gives us nice fade effects
+exec compton -f --fade-delta 4 # This is the compositor, gives us nice fade effects
 
 bindsym $mod+r mode "resize"
 
