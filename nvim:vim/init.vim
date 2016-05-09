@@ -24,6 +24,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let python_highlight_all = 1
 let g:deoplete#enable_at_startup = 1
+let g:gruvbox_contrast_dark='soft'
 syntax enable
 set background=dark                                " Uses the dark gruvbox theme instead of the light alternative
 set expandtab                                      " insert spaces instead of tab characters"
