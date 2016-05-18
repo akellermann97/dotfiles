@@ -203,10 +203,10 @@ bindsym $mod+r mode "resize"
 
        # Widow Colours
        #                         border  background text    indicator
-         client.focused          $red 	 $purple      $red    $red
-	 client.focused_inactive $red 	 $bg     $blue $red
-	 client.unfocused        $red 	 $bg        $red $red
-         client.urgent           $red 	 $aqua      $red $red
+         client.focused          $red 	 $purple      $red    $dpurple
+	 client.focused_inactive $red 	 $bg     $blue $dpurple
+	 client.unfocused        $red 	 $bg        $red $bg
+         client.urgent           $red 	 $aqua      $red $bg
 
 bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
