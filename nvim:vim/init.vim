@@ -10,11 +10,13 @@ Plug 'morhetz/gruvbox'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
-        
+Plug 'airblade/vim-gitgutter'        
 
 call plug#end()                 
 let mapleader = "\<Space>"                         " Set leader to space, this should change my life
 nnoremap <Leader>o :CtrlP<CR>                      " This should allow me to open files with space and o
+nnoremap <Leader>p :! python3.5 %<CR>
+nnoremap <Leader>w :w<CR>
 colorscheme gruvbox                                " This is the colorscheme
 if has("gui_running")
     set guifont=Fira\ Mono\ for\ Powerline         " Make sure to escape the spaces in the name properly
