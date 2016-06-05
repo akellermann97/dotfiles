@@ -20,11 +20,11 @@ These files haven't been tested on a variety of machines, so you may find that s
 straight out of the box.
 
 #### Known Issues
-Stuff like the .Xresources is Linux specific, and serves no purpose on a machine
+Stuff like the .Xresources is Linux specfic, and serves no purpose on a machine
 running MAC OS X
 
 the .zshrc was created and maintained on a Mac, so the directories for certain
 things needs to be changed in order for someone to use it on Linux
 
 All of the linux based dotfiles are at the moment Fedora specific, because it's
-the distribution of my choice.
+the distrobution of my choice.

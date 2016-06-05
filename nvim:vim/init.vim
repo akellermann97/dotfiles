@@ -15,7 +15,7 @@ Plug 'airblade/vim-gitgutter'
 call plug#end()                 
 let mapleader = "\<Space>"                         " Set leader to space, this should change my life
 nnoremap <Leader>o :CtrlP<CR>                      " This should allow me to open files with space and o
-nnoremap <Leader>p :! python3.5 %<CR>
+nnoremap <Leader><Tab>  <C-w><C-w><CR>
 nnoremap <Leader>w :w<CR>
 colorscheme gruvbox                                " This is the colorscheme
 if has("gui_running")
