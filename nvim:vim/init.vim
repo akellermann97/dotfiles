@@ -7,6 +7,7 @@ Plug 'ervandew/supertab'
 Plug 'hdima/python-syntax'
 Plug 'scrooloose/nerdtree'
 Plug 'morhetz/gruvbox'
+Plug 'luochen1990/rainbow'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -24,6 +25,7 @@ endif
 map <F2> :NERDTreeToggle<CR>                       " Toggles NERDTreeToggle
 nnoremap <F3> :set hlsearch!<CR>                   " Turns off search highlighting
 set relativenumber                                 " Set numbers relative to the line that you're on
+let g:rainbow_active = 1                           " Sets fancy colors for parenthesis and stuff
 set number                                         " Makes the line that the cursor is currently on show absolute value
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
