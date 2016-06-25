@@ -15,15 +15,14 @@ Plug 'airblade/vim-gitgutter'
 
 call plug#end()                 
 let mapleader = "\<Space>"                         " Set leader to space, this should change my life
-nnoremap <Leader>o :CtrlP<CR>                      " This should allow me to open files with space and o
+nnoremap <Leader>p :CtrlP<CR>                      " This should allow me to open files with space and o
 nnoremap <Leader><Tab>  <C-w><C-w><CR>
-nnoremap <Leader>w :w<CR>
+map <Leader>f :NERDTreeToggle<CR>                  " Toggles NERDTreeToggle
+nnoremap <Leader>s :set hlsearch!<CR>              " Turns off search highlighting
 colorscheme gruvbox                                " This is the colorscheme
 if has("gui_running")
     set guifont=Fira\ Mono\ for\ Powerline         " Make sure to escape the spaces in the name properly
 endif
-map <F2> :NERDTreeToggle<CR>                       " Toggles NERDTreeToggle
-nnoremap <F3> :set hlsearch!<CR>                   " Turns off search highlighting
 set relativenumber                                 " Set numbers relative to the line that you're on
 let g:rainbow_active = 1                           " Sets fancy colors for parenthesis and stuff
 set number                                         " Makes the line that the cursor is currently on show absolute value
