@@ -12,6 +12,7 @@ Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'        
+Plug 'zchee/deoplete-jedi'                         " Provides OmniCompletion for Python <3
 
 call plug#end()                 
 let mapleader = "\<Space>"                         " Set leader to space, this should change my life
@@ -30,6 +31,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let python_highlight_all = 1
 let g:deoplete#enable_at_startup = 1
+let deoplete#sources#jedi#show_docstring = 1
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 syntax enable
@@ -50,7 +52,3 @@ set lazyredraw                                     " redraw only when we need to
 set showmatch                                      " highlight matching [{()}]
 set incsearch                                      " search as characters are entered
 set hlsearch                                       " highlight matches
-set noswapfile                                     " Swap files always gave me too much trouble, better off turning them off
-set nobackup
-set nowritebackup
-
