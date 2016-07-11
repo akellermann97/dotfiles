@@ -9,8 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-gaps outer 0
-gaps inner 6
+gaps inner 10
 smart_gaps on
 smart_borders on
 
@@ -191,7 +190,7 @@ mode "resize" {
 #This is where I've placed startup programs
 
 exec_always /usr/bin/vmware-user-suid-wrapper # This runs VMware tools for me
-exec_always feh --bg-center /home/akellermann/Pictures/japan.jpg
+exec_always feh --bg-center /home/akellermann/Pictures/japan.png
 exec compton -f --fade-delta 4 # This is the compositor, gives us nice fade effects
 
 bindsym $mod+r mode "resize"
