@@ -29,6 +29,7 @@ set relativenumber                                 " Set numbers relative to the
 let g:rainbow_active = 1                           " Sets fancy colors for parenthesis and stuff
 set number                                         " Makes the line that the cursor is currently on show absolute value
 let g:airline#extensions#tabline#enabled = 1
+let g:gruvbox_contrast_dark = 'soft'
 let g:airline_powerline_fonts = 1
 let python_highlight_all = 1
 let g:deoplete#enable_at_startup = 1
