@@ -14,14 +14,18 @@ Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'        
 Plug 'zchee/deoplete-jedi'                         " Provides OmniCompletion for Python <3
+Plug 'chriskempson/base16-vim'
+Plug 'roosta/srcery'
+Plug 'Valloric/MatchTagAlways'
 
 call plug#end()                 
 let mapleader = "\<Space>"                         " Set leader to space, this should change my life
 nnoremap <Leader>p :CtrlP<CR>                      " This should allow me to open files with space and o
+set background=dark
 nnoremap <Leader><Tab>  <C-w><C-w><CR>
 map <Leader>f :NERDTreeToggle<CR>                  " Toggles NERDTreeToggle
 nnoremap <Leader>s :set hlsearch!<CR>              " Turns off search highlighting
-colorscheme gruvbox                                " This is the colorscheme
+colorscheme gruvbox
 if has("gui_running")
     set guifont=Fira\ Mono\ for\ Powerline         " Make sure to escape the spaces in the name properly
 endif
@@ -36,7 +40,6 @@ let deoplete#sources#jedi#show_docstring = 1
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 syntax enable
-set background=dark                                " Uses the dark gruvbox theme instead of the light alternative
 set expandtab                                      " insert spaces instead of tab characters"
 set backspace=2                                    " make backspace work like most other apps
 set textwidth=79
