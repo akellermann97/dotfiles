@@ -1,17 +1,17 @@
 [options]
-font = Hack 11
+font = Roboto Mono Medium for Powerline 11 
 allow_bold = true
 clickable_url = true
 
 [colors]
 # hard contrast: background = #1d2021
-background = #282828
-# soft contrast: background = #32302f
+# background = #282828
+background = #32302f
 foreground = #ebdbb2
 foreground_bold = #ebdbb2
 
 # dark0 + gray
-color0 = #282828
+color0 = #32302f
 color8 = #928374
 
 # neutral_red + bright_red
