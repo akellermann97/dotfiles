@@ -17,6 +17,7 @@ Plug 'zchee/deoplete-jedi'                         " Provides OmniCompletion for
 Plug 'chriskempson/base16-vim'
 Plug 'roosta/srcery'
 Plug 'Valloric/MatchTagAlways'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()                 
 let mapleader = "\<Space>"                         " Set leader to space, this should change my life
