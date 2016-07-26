@@ -17,14 +17,16 @@ Plug 'zchee/deoplete-jedi'                         " Provides OmniCompletion for
 Plug 'chriskempson/base16-vim'
 Plug 'roosta/srcery'
 Plug 'Valloric/MatchTagAlways'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()                 
 let mapleader = "\<Space>"                         " Set leader to space, this should change my life
 nnoremap <Leader>p :CtrlP<CR>                      " This should allow me to open files with space and o
-set background=dark
 nnoremap <Leader><Tab>  <C-w><C-w><CR>
 map <Leader>f :NERDTreeToggle<CR>                  " Toggles NERDTreeToggle
 nnoremap <Leader>s :set hlsearch!<CR>              " Turns off search highlighting
+nnoremap <Leader>v :vs<CR>
+set background=dark
 colorscheme gruvbox
 if has("gui_running")
     set guifont=Fira\ Mono\ for\ Powerline         " Make sure to escape the spaces in the name properly
@@ -43,7 +45,7 @@ let g:ctrlp_cmd = 'CtrlP'
 syntax enable
 set expandtab                                      " insert spaces instead of tab characters"
 set backspace=2                                    " make backspace work like most other apps
-set textwidth=79
+"set textwidth=79
 set fileformat=unix
 set shiftwidth=2
 set softtabstop=2
