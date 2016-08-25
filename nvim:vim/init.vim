@@ -13,6 +13,7 @@ Plug 'bling/vim-airline'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'airblade/vim-gitgutter'        
 Plug 'zchee/deoplete-jedi'                         " Provides OmniCompletion for Python <3
 Plug 'chriskempson/base16-vim'
@@ -48,8 +49,8 @@ set expandtab                                      " insert spaces instead of ta
 set backspace=2                                    " make backspace work like most other apps
 "set textwidth=79
 set fileformat=unix
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1                  " Uses true beautiful color
 set laststatus=2                                   " Apparently this if for vim-airline
 set showcmd                                        " show command in bottom bar
