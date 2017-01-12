@@ -2,25 +2,26 @@ call plug#begin()                                  " Used to start up the plug i
 
 Plug 'Raimondi/delimitMate'                        " autocomplete parenthesis and stuff like comments
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'scrooloose/syntastic'
 Plug 'Shougo/deoplete.nvim'
 Plug 'ervandew/supertab'
 Plug 'hdima/python-syntax'
 Plug 'scrooloose/nerdtree'
 Plug 'morhetz/gruvbox'
-Plug 'roosta/srcery'
-Plug 'luochen1990/rainbow'
+Plug 'w0rp/ale'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'justinmk/vim-syntax-extra'
 Plug 'raphamorim/lucario'
 Plug 'airblade/vim-gitgutter'
 Plug 'zchee/deoplete-jedi'                         " Provides OmniCompletion for Python <3
-Plug 'chriskempson/base16-vim'
 Plug 'roosta/srcery'
 Plug 'Valloric/MatchTagAlways'
 Plug 'rust-lang/rust.vim'
+Plug 'godlygeek/tabular'
+Plug 'davidklsn/vim-sialoquent'
+Plug 'arcticicestudio/nord-vim'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 let mapleader = "\<Space>"                         " Set leader to space, this should change my life
@@ -29,8 +30,31 @@ nnoremap <Leader><Tab>  <C-w><C-w><CR>
 map <Leader>f :NERDTreeToggle<CR>                  " Toggles NERDTreeToggle
 nnoremap <Leader>s :set hlsearch!<CR>              " Turns off search highlighting
 nnoremap <Leader>v :vs<CR>
+
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:lightline = {
+  \ 'colorscheme': 'nord',
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste' ],
+  \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+  \ },
+  \ 'component': {
+  \   'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
+  \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+  \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+  \ },
+  \ 'component_visible_condition': {
+  \   'readonly': '(&filetype!="help"&& &readonly)',
+  \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+  \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+  \ },
+  \ 'separator': { 'left': '', 'right': '' },
+  \ 'subseparator': { 'left': '∿', 'right': '❂' }
+  \ }
+
 set background=dark
-colorscheme gruvbox
+colorscheme nord
 if has("gui_running")
     set guifont=Fira\ Mono\ for\ Powerline         " Make sure to escape the spaces in the name properly
 endif
