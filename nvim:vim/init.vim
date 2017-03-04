@@ -55,11 +55,7 @@ let g:lightline = {
 
 set background=dark
 colorscheme nord
-if has("gui_running")
-    set guifont=Fira\ Mono\ for\ Powerline         " Make sure to escape the spaces in the name properly
-endif
 set relativenumber                                 " Set numbers relative to the line that you're on
-let g:rainbow_active = 1                           " Sets fancy colors for parenthesis and stuff
 set number                                         " Makes the line that the cursor is currently on show absolute value
 let g:gruvbox_contrast_dark = 'soft'
 let python_highlight_all = 1
