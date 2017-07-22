@@ -23,6 +23,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'godlygeek/tabular'
 Plug 'Shougo/denite.nvim'
 Plug 'sebastianmarkow/deoplete-rust'
+Plug 'mileszs/ack.vim'
 
 call plug#end()
 let mapleader = "\<Space>"                         " Set leader to space, this should change my life
