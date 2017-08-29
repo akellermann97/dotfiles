@@ -32,6 +32,7 @@ map <Leader>f :NERDTreeToggle<CR>                  " Toggles NERDTreeToggle
 nnoremap <Leader>s :set hlsearch!<CR>              " Turns off search highlighting
 nnoremap <Leader>n :tabnext<CR>                   
 nnoremap <Leader>p :tabprev<CR>
+nnoremap <Leader>e :tabe<CR>
 nnoremap <Leader>v :vs<CR>
 tnoremap <Esc> <C-\><C-n>
 
