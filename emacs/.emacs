@@ -25,14 +25,23 @@
 (add-hook 'after-init-hook 'global-company-mode)
 (package-initialize)
 
+;; attempt to change frame settings
+;; Makes the title-bar transparent
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
 ;; This is which-key, tells you what keys to pres
 (which-key-mode) 
-(require 'ido)
-(ido-mode t)
+
+;; ivy stuff
+(ivy-mode 1)
+
+;; Aesthetic things
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
 
 ;; Rust plug-ins
 (add-hook 'rust-mode-hook #'racer-mode)
@@ -49,11 +58,8 @@
   '(add-to-list 'company-backends 'company-anaconda))
 (add-hook 'python-mode-hook 'anaconda-mode)
 
-(require 'powerline)
-(powerline-vim-theme)
-
 ;; esc quits
-(load-theme 'gruvbox t)
+(load-theme 'nord t)
 ;;; .emacs ends here
 (require 'evil)
 (evil-mode 1)
@@ -61,7 +67,6 @@
 ;; Windmove
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -69,22 +74,14 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "bfdcbf0d33f3376a956707e746d10f3ef2d8d9caa1c214361c9c08f00a1c8409" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "b2b86aedf22eb69156420e54b28aa39375277d38ee953bbce8342e71a2e68c41" "4eb982b248bf818a72877ecb126a2f95d71eea24680022789b14c3dec7629c1b" "65d9573b64ec94844f95e6055fe7a82451215f551c45275ca5b78653d505bc42" "7f3ef7724515515443f961ef87fee655750512473b1f5bf890e2dc7e065f240c" "527df6ab42b54d2e5f4eec8b091bd79b2fa9a1da38f5addd297d1c91aa19b616" "fee4e306d9070a55dce4d8e9d92d28bd9efe92625d2ba9d4d654fc9cd8113b7f" "93268bf5365f22c685550a3cbb8c687a1211e827edc76ce7be3c4bd764054bad" default)))
- '(display-battery-mode nil)
- '(fringe-mode 0 nil (fringe))
- '(global-linum-mode nil)
- '(linum-format (quote dynamic))
- '(menu-bar-mode t)
+    ("40da996f3246a3e99a2dff2c6b78e65307382f23db161b8316a5440b037eb72c" default)))
  '(package-selected-packages
    (quote
-    (nlinum zenburn-theme solarized-theme company-anaconda company-jedi anaconda-mode dashboard racer rust-mode which-key gruvbox-theme magit evil-escape with-editor telephone-line projectile powerline nord-theme markdown-mode magit-popup linum-relative flycheck exec-path-from-shell evil company base16-theme auto-complete auctex)))
- '(scroll-bar-mode nil)
- '(send-mail-function (quote sendmail-send-it))
- '(tool-bar-mode nil))
+    (ivy zenburn-theme which-key sublimity solarized-theme smex racer projectile powerline nord-theme nlinum markdown-mode magit linum-relative ido-vertical-mode gruvbox-theme flycheck exec-path-from-shell evil dashboard company-jedi company-anaconda auto-complete auctex)))
+ '(tramp-syntax (quote default) nil (tramp)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(fringe ((t nil)))
- '(scroll-bar ((t nil))))
+ )
