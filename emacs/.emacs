@@ -24,10 +24,10 @@
 ;; This is only to set the correct path on MAC OS
 (use-package exec-path-from-shell
   :ensure t
-  :init
-  (when (memq window-system '(mac ns x))
-    (exec-path-from-shell-initialize))
   )
+
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 
 (use-package magit
   :ensure t
@@ -66,8 +66,21 @@
 
 ;; This is which-key, tells you what keys to press
 (use-package which-key
+  :ensure t
   :config
   (which-key-mode))
+
+(use-package nord-theme
+  :ensure t
+  )
+
+(use-package swiper
+  :ensure t
+  )
+
+(use-package counsel
+  :ensure t
+  )
 
 ;; Interactive do mode
 (use-package ivy
@@ -154,6 +167,7 @@
  '(custom-safe-themes
    (quote
     ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "90ea0413ad77ae560f150de2e3888da4a2088590209705306156a307899a37ec" "11878ac0a75f25057b217f74d9098adbd893dc1374da94d81f715b70f4efa00b" "ce0788113995714fd96970417e8e71d5182d02bc40cc7ffef307f5e01e55942f" "4ee4a855548a7a966fe8722401441499b0d8b2fcf3d12438f81e016b6efed0e6" "ed2b5df51c3e1f99207074f8a80beeb61757ab18970e43d57dec34fe21af2433" "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "40da996f3246a3e99a2dff2c6b78e65307382f23db161b8316a5440b037eb72c" default)))
+ '(display-battery-mode t)
  '(display-line-numbers nil)
  '(display-line-numbers-type (quote relative))
  '(display-line-numbers-width nil)
