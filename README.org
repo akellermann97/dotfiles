@@ -17,7 +17,7 @@ Over the years, I've used lots of programs across different computers, and routi
 *** Weechat
     I don't think I ever really used IRC.
 *** i3  
-    I love this Window manager, but since I almost exclusively use Mac OS, I don't update this configuration file or really use i3 anymore. Check [[https:www.reddit.com/r/unixporn][unixporn]] out if you're interested in other cool configurations/ alternative tiling window managers.
+    I love this Window manager, but since I almost exclusively use Mac OS, I don't update this configuration file or really use i3 anymore. Check [[www.reddit.com/r/unixporn][unixporn]] out if you're interested in other cool configurations/ alternative tiling window managers.
 *** termite
     When I used i3, this was my terminal emulator of choice.
 *** zshrc
