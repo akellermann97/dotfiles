@@ -5,9 +5,9 @@
 call plug#begin()                                  " Used to start up the plug in manager
 
 Plug 'morhetz/gruvbox'
-Plug 'itchyny/lightline.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'Raimondi/delimitMate'                        " autocomplete parenthesis and stuff like comments
+Plug 'lifepillar/vim-solarized8'
 Plug 'Shougo/deoplete.nvim'
 Plug 'ervandew/supertab'
 Plug 'hdima/python-syntax'
@@ -24,6 +24,8 @@ Plug 'godlygeek/tabular'
 Plug 'Shougo/denite.nvim'
 Plug 'sebastianmarkow/deoplete-rust'
 Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'AlessandroYorba/Arcadia'
 
 call plug#end()
 let mapleader = "\<Space>"                         " Set leader to space, this should change my life
@@ -39,8 +41,8 @@ tnoremap <Esc> <C-\><C-n>
 " Ale 
 let g:ale_lint_delay = 3000
 
-" Lightline
-let g:lightline = { 'colorscheme': 'nord' }
+"Arcadia Theme"
+let g:arcadia_Daybreak = 1
 
 " Deoplete
 let g:deoplete#sources#rust#racer_binary='/Users/Alexander/.cargo/bin/racer'
@@ -53,7 +55,7 @@ let python_highlight_all = 1
 " gruvbox
 let g:gruvbox_contrast_dark = 'soft'
 
-set background=dark
+set background=light
 colorscheme nord
 set relativenumber                                 " Set numbers relative to the line that you're on
 set number                                         " Makes the line that the cursor is currently on show absolute value

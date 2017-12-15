@@ -1,0 +1,24 @@
+* Breakdown
+
+Over the years, I've used lots of programs across different computers, and routinely find myself wanting to share my dotfiles between PC's or over the internet. In addition, this allows me to keep my dotfiles safe in case of hard drive failure or some other unforunate event. To those wanting to see what configuration I use for development, brief descriptions of each of the applications are used. The applications are grouped into two main categories:
+1) Applications currently used
+2) Applications seldom used / deprecated
+   
+** Applications currently in use
+*** Emacs
+     - I've used Emacs to completely Neovim, which replaced my use of Vim. I'm a huge fan of modal editing and agree that it's a superior way of editing when compared to Emacs-style editors. But Vim's scripting language is painful to use, I don't agree with Vim's contributor model, and Neovim's extensibility can't compare to what Emacs is capable of.
+     - This .emacs file is heavily customized. If you found this file from a presentation link I've left up here, and you're curious about learning emacs, stay away from this file.
+     - .emacs has Evil mode, some Leader key stuff added, relies on a custom theme (check the nord-repo), and has a use-package dependency.
+** Applications seldom used / deprecated
+*** Neovim / Vim
+    (see comment in Emacs)
+    Vim file has been untouched since I moved to Neovim I think, so it should be pretty old (around 2016?)
+    Neovim is the future, please support what those developers are doing if you can afford it. Remember, using a free version of Vi is not a sin, but a penance.
+*** Weechat
+    I don't think I ever really used IRC.
+*** i3  
+    I love this Window manager, but since I almost exclusively use Mac OS, I don't update this configuration file or really use i3 anymore. Check [[https:www.reddit.com/r/unixporn][unixporn]] out if you're interested in other cool configurations/ alternative tiling window managers.
+*** termite
+    When I used i3, this was my terminal emulator of choice.
+*** zshrc
+    - This file has some aliases but I use eshell now.
