@@ -1,6 +1,6 @@
-" Author: Alexander Kellermann Nieves / Github : Dormio
+" Author: Alexander Kellermann Nieves / Github : akellermann97
 " Description: Neovim configuration file
-"
+" Prereq: You need to download vim plug at: https://github.com/junegunn/vim-plug
 "
 call plug#begin()                                  " Used to start up the plug in manager
 
@@ -8,7 +8,6 @@ Plug 'morhetz/gruvbox'
 Plug 'arcticicestudio/nord-vim'
 Plug 'Raimondi/delimitMate'                        " autocomplete parenthesis and stuff like comments
 Plug 'lifepillar/vim-solarized8'
-Plug 'Shougo/deoplete.nvim'
 Plug 'ervandew/supertab'
 Plug 'hdima/python-syntax'
 Plug 'scrooloose/nerdtree'
@@ -18,7 +17,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'justinmk/vim-syntax-extra'
 Plug 'airblade/vim-gitgutter'
 Plug 'zchee/deoplete-jedi'                         " Provides OmniCompletion for Python <3
-Plug 'Valloric/MatchTagAlways'
 Plug 'rust-lang/rust.vim'
 Plug 'godlygeek/tabular'
 Plug 'Shougo/denite.nvim'
@@ -43,14 +41,6 @@ let g:ale_lint_delay = 3000
 
 "Arcadia Theme"
 let g:arcadia_Daybreak = 1
-
-" Deoplete
-let g:deoplete#sources#rust#racer_binary='/Users/Alexander/.cargo/bin/racer'
-let g:deoplete#sources#rust#rust_source_path='/Users/Alexander/gitStuff/rustSource/rust/src'
-let g:deoplete#sources#rust#documentation_max_height=20
-let g:deoplete#enable_at_startup = 1
-let deoplete#sources#jedi#show_docstring = 1
-let python_highlight_all = 1
 
 " gruvbox
 let g:gruvbox_contrast_dark = 'soft'
