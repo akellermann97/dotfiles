@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; AKellermann's .emacs file
 ;; Alexander K. Kellermann
-;; Updated: December 1st, 2025
+;; Updated: December 3rd, 2025
 ;;
 ;;       ___           ___           ___           ___           ___
 ;;      /\  \         /\__\         /\  \         /\  \         /\  \
@@ -61,9 +61,9 @@
 (set-face-attribute 'default t :font "SF Mono-13")
 
 ;; Load custom theme
-(use-package nord-theme
+(use-package doom-themes
              :config
-             (load-theme 'nord t))
+             (load-theme 'doom-nord t))
 ;;(setq nord-comment-brightness 10)
 ;;(load-theme 'nord t)
 
@@ -241,9 +241,9 @@
 (use-package evil
   :config
   (evil-mode 1)
+  (evil-set-undo-system 'undo-redo)
   ;; Make underscores part of words for evil commands
   (add-hook 'prog-mode-hook #'(lambda () (modify-syntax-entry ?_ "w"))))
-
 (use-package evil-surround
   :config
   (global-evil-surround-mode 1))
