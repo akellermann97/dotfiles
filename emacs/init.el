@@ -1,8 +1,8 @@
 ;;; package --- Summary
 ;;; Commentary:
-;;; AKellermann's .emacs file
+;;; AKellermann's .init.el file
 ;; Alexander K. Kellermann
-;; Updated: December 3rd, 2025
+;; Updated: December 9th, 2025
 ;;
 ;;       ___           ___           ___           ___           ___
 ;;      /\  \         /\__\         /\  \         /\  \         /\  \
@@ -25,6 +25,8 @@
 (require 'package)
 
 ;; Add package archives
+(add-to-list 'package-archives
+             '("gnu" . "https://elpa.gnu.org/packages/"))
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives
@@ -56,21 +58,18 @@
 ;;; UI Configuration
 ;;; ============================================================================
 
-;; Font preference - San Francisco Mono, size 13 (Mac exclusive)
-(add-to-list 'default-frame-alist '(font . "SF Mono-13"))
-(set-face-attribute 'default t :font "SF Mono-13")
-
 ;; Load custom theme
 (use-package doom-themes
              :config
              (load-theme 'doom-nord t))
-;;(setq nord-comment-brightness 10)
-;;(load-theme 'nord t)
 
 ;; Remove UI clutter
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (setq frame-title-format "")
+;; Transparent titlebar (works on native Mac OS)
+(add-to-list 'default-frame-alist '(ns-appearance . dark))
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 
 ;;; ============================================================================
 ;;; Mac OS Specific
@@ -81,16 +80,6 @@
   :config
   (when (memq window-system '(mac ns x))
     (exec-path-from-shell-initialize)))
-
-;; Mac modifier key management for emacs-plus
-(setq ns-command-modifier 'meta)       ; Command key = super
-(setq ns-option-modifier 'super)         ; Option key = meta
-(setq ns-control-modifier 'control)     ; Control key = control
-(setq ns-right-option-modifier 'none)   ; Right Option for special characters
-
-;; Transparent titlebar (works on native Mac OS)
-(add-to-list 'default-frame-alist '(ns-appearance . dark))
-(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 
 ;; Whitespace margins for breathing room
 (set-frame-parameter nil 'internal-border-width 10)
@@ -233,6 +222,11 @@
   (claude-code-mode)
   :bind-keymap ("C-c c" . claude-code-command-map))
 
+;;; ============================================================================
+;;; Markdown Mode
+;;; ============================================================================
+(use-package markdown-mode :ensure t)
+(add-hook 'markdown-mode-hook 'visual-line-mode)
 
 ;;; ============================================================================
 ;;; Evil Mode (Vim Emulation)
@@ -263,7 +257,7 @@
 (add-to-map "<SPC> f" 'counsel-find-file)
 (add-to-map "<SPC> r" 'recentf-open-files)
 (add-to-map "<SPC> m" 'magit-status)
-(add-to-map "<SPC> p" 'projectile-command-map)
+(add-to-map "<SPC> p" 'project-find-file)
 
 ;; Window navigation
 (add-to-map "<SPC> j" 'windmove-down)
@@ -303,4 +297,3 @@
 ;;; ============================================================================
 
 (provide '.emacs)
-;;; .emacs ends here
